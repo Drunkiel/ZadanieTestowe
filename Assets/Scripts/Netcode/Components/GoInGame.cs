@@ -95,7 +95,7 @@ public partial struct GoInGameServerSystem : ISystem
             var networkId = networkIdFromEntity[reqSrc.ValueRO.SourceConnection];
 
             // Log information about the connection request that includes the client's assigned NetworkId and the name of the prefab spawned.
-            UnityEngine.Debug.Log($"'{worldName}' setting connection '{networkId.Value}' to in game, spawning a Ghost '{prefabName}' for them!");
+            Debug.Log($"'{worldName}' setting connection '{networkId.Value}' to in game, spawning a Ghost '{prefabName}' for them!");
 
             // Instantiate the prefab
             var player = commandBuffer.Instantiate(prefab);
